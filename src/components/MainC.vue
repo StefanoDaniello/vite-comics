@@ -4,6 +4,7 @@
             <div class="container p-5">
                 <h3 class="bg-black text-white p-1" role="button" @click="jumbo">--> Content goes here <--</h3>
             </div>
+
             <div :class="(prova ? 'd-none' : 'd-block')">
                 <div id="jumbo">
                     <img src="/img/jumbotron.jpg" alt="">
@@ -74,6 +75,7 @@ import BlueSlideC from './BlueSlideC.vue';
 </script>
 
 <style lang="scss" scoped>
+   
    .st-card{
        width: 100%;
        height: 400px;
@@ -81,7 +83,7 @@ import BlueSlideC from './BlueSlideC.vue';
    }
    .st-card:hover{
        box-shadow: 0 0 10px 5px rgb(1, 190, 175);
-       transition: all 0.5s;
+       transition: ease-in-out 0.5s;
        border-color:rgb(255, 255, 255);
     }
 </style>
