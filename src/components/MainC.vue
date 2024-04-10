@@ -1,21 +1,22 @@
 <template>
    <main>
-    <div class="bg-black">
-        <div class="container p-5">
-           <span class="bg-black text-white">--> Content goes here <--</span>
+        <div class="bg-black">
+            <div class="container p-5">
+            <span class="bg-black text-white">--> Content goes here <--</span>
+            </div>
         </div>
-    </div>
+
         <div class="bg-info ">
             <div class="container">
                 <ul class="d-flex justify-content-center text-white">
-                    <li v-for="(img,index) in shopimg" :key="index" class="m-3">
+                    <li v-for="(img,index) in shopimg" :key="index" class="d-flex m-2">
                         <div>
-                            <img :src="img" alt=""/>
+                            <img :src="img" alt="shop-img"/>
                         </div>
+                        <li v-for="(index) in shop" :key="index"></li>
+                        <p class="mx-2">{{shop[index]}}</p>
                     </li>
-                    <li v-for="(items,index) in shop" :key="index" class="m-3">
-                        {{items}}
-                    </li>
+                   
                 </ul>
             </div>
         </div>
