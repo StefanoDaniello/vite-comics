@@ -1,11 +1,11 @@
 <template>
    <header class="bg-light">
-     <nav class="container d-flex justify-content-between">
+     <nav class="container d-flex justify-content-between my-2">
         <div>
-            <img src="../assets/public/img/dc-logo.png" alt="logo"/>
+            <img src="/img/dc-logo.png" alt="logo"/>
         </div>
-        <ul class="d-flex">
-            <li v-for="(items,index) in menu" :key="index" class="m-3">
+        <ul class="d-flex align-items-center">
+            <li v-for="(items,index) in menu" :key="index" class="mx-3">
                 {{items}}
             </li>
         </ul>
@@ -36,7 +36,5 @@
 </script>
 
 <style lang="scss" scoped>
-   ul{
-        list-style: none;
-    }
+  
 </style>

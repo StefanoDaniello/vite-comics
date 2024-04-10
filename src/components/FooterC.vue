@@ -1,20 +1,41 @@
 <template>
    <footer>
-
-    <div>
-        <img src="../assets/public/img/dc-logo-bg.png" alt="logo-DC">
-    </div>
+        <div id="footer-top" class="d-flex justify-content-around">
+            <div class="p-5">
+                <ul>
+                    <li class="text-white">
+                        <a href=""></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="logo-width"></div>
+        </div>
+        <div id="footer-bottom" class="bg-dark">
+            bdffgkjberfnbeffref
+        </div> 
    </footer>
 </template>
 
 <script>
     export default {
         name: 'FooterC',
+        data() {
+            return {
+                
+            }
+        }
     }
 </script>
 
 <style lang="scss" scoped>
-    footer{
-        background-image: url('../assets/public/img/footer-bg.jpg');
+    #footer-top{
+        background-size: cover;
     }
+    .logo-width{
+        width: 563px;
+        height: 370px;
+        background-position: center;
+        background-image: url('/img/dc-logo-bg.png');
+    }
+   
 </style>
