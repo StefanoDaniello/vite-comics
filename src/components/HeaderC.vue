@@ -1,6 +1,6 @@
 <template>
    <header class="bg-light">
-     <nav class="container d-flex justify-content-between my-2">
+     <nav class="container d-flex justify-content-between my-3">
         <div>
             <img src="/img/dc-logo.png" alt="logo"/>
         </div>

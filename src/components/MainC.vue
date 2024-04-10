@@ -2,7 +2,7 @@
    <main>
         <div class="bg-black">
             <div class="container p-5">
-            <h3 class="bg-black text-white">--> Content goes here <--</h3>
+            <h3 class="bg-black text-white p-1">--> Content goes here <--</h3>
             </div>
         </div>
 

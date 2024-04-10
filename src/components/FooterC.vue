@@ -1,33 +1,42 @@
 <template>
    <footer>
         <div id="footer-top" class="d-flex justify-content-around align-items-center ">
-        <div class="d-flex">
-            <div class="px-2">
-                <LinksC :title="links.dccomics.title" :items="links.dccomics.items"/>
-                <LinksC :title="links.shop.title" :items="links.shop.items"/>
-            </div>
             <div class="d-flex">
-                <LinksC :title="links.dc.title" :items="links.dc.items"/>
-                <LinksC :title="links.sites.title" :items="links.sites.items"/>
+                <div class="px-2">
+                    <LinksC :title="links.dccomics.title" :items="links.dccomics.items"/>
+                    <LinksC :title="links.shop.title" :items="links.shop.items"/>
+                </div>
+                <div class="d-flex">
+                    <LinksC :title="links.dc.title" :items="links.dc.items"/>
+                    <LinksC :title="links.sites.title" :items="links.sites.items"/>
+                </div>
             </div>
-        </div>
-        
-           
-
+            
             <div class="logo-bg"></div>
         </div>
+
         <div id="footer-bottom" class="bg-dark">
-            bdffgkjberfnbeffref
+           <div class="container d-flex justify-content-between align-items-center py-2">
+               <div class="text-white blue-border p-2">
+                   <a href="#">SIGN-UP NOW!</a> 
+               </div>
+               <div >
+                   <FollowLinks :title="followlinks.title" :items="followlinks.items"/>
+               </div>   
+           </div>
+
         </div> 
    </footer>
 </template>
 
 <script>
     import LinksC from './LinksC.vue';
+    import FollowLinks from './FollowLinks.vue';
     export default {
         name: 'FooterC',
         components: {
             LinksC,
+            FollowLinks,
         },
         data() {
             return {
@@ -138,7 +147,32 @@
                                 url:'#'
                             }
                         ]
-                    }
+                    },
+                },
+                followlinks:{
+                    title:'FOLLOW US',
+                    items:[
+                        {
+                            name:'fa-brands fa-facebook',
+                            url:'#'
+                        },
+                        {
+                            name:'fa-brands fa-twitter',
+                            url:'#'
+                        },
+                        {
+                            name:'fa-brands fa-youtube',
+                            url:'#'
+                        },
+                        {
+                            name:'fa-brands fa-pinterest',
+                            url:'#'
+                        },
+                        {
+                            name:'fa-brands fa-periscope',
+                            url:'#'
+                        }
+                    ]   
                 }
             }
         }
@@ -155,8 +189,10 @@
         background-position: center;
         background-image: url('/img/dc-logo-bg.png');
     }
-    
+    .blue-border{
+        border:2px solid rgb(0, 192, 176);
+    }
     #footer-bottom{
-        height: 100px;
+       padding: 10px 0px;
     }
 </style>
