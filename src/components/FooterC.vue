@@ -8,7 +8,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="logo-width"></div>
+            <div class="logo-bg"></div>
         </div>
         <div id="footer-bottom" class="bg-dark">
             bdffgkjberfnbeffref
@@ -31,7 +31,7 @@
     #footer-top{
         background-size: cover;
     }
-    .logo-width{
+    .logo-bg{
         width: 563px;
         height: 370px;
         background-position: center;
