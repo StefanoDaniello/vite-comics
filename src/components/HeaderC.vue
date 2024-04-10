@@ -5,8 +5,9 @@
             <img src="/img/dc-logo.png" alt="logo"/>
         </div>
         <ul class="d-flex align-items-center">
-            <li v-for="(items,index) in menu" :key="index" class="mx-3">
+            <li v-for="(items,index) in menu" :key="index" class="mx-3 fw-bold " :class="index === 2 ? 'text-info ' : ''">
                 {{items}}
+                <div :class="index === 2 ? 'st-blue-border' : ''"></div>
             </li>
         </ul>
      </nav>
@@ -36,5 +37,10 @@
 </script>
 
 <style lang="scss" scoped>
-  
+  .st-blue-border{
+      width: 100%;
+      height: 5px;
+      background-color: rgb(0, 192, 128);
+      border-radius: 10px;
+  }
 </style>

@@ -12,17 +12,16 @@ $fa-font-path: '../fonts/webfonts';
 
 body{
     font-family: $basefont;
-    ul{
-        list-style: none;
-    }
-    img{
-        width: 100%;
-    }
-    a{
-        text-decoration: none;
-        color: inherit;
-    }
-    
+}
+ul{
+    list-style: none;
+}
+img{
+    width: 100%;
+}
+a{
+    text-decoration: none;
+    color: inherit;
 }
 
 #footer-top{
