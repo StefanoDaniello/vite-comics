@@ -17,7 +17,7 @@
 
         <div id="footer-bottom" class="bg-dark">
            <div class="container d-flex justify-content-between align-items-center py-2">
-               <div class="text-white blue-border p-2">
+               <div class="text-white blue-border p-2" id="sign-button">
                    <a href="#">SIGN-UP NOW!</a> 
                </div>
                <div >
@@ -194,5 +194,9 @@
     }
     #footer-bottom{
        padding: 10px 0px;
+    }
+    #sign-button:hover{
+        background-color: rgb(0, 192, 176);
+        transition: 0.5s ease-in-out;
     }
 </style>

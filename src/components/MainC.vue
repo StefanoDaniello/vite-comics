@@ -1,25 +1,19 @@
 <template>
    <main>
-        <div class="bg-black">
-            <div class="container p-5">
-                <h3 class="bg-black text-white p-1" role="button" @click="jumbo">--> Content goes here <--</h3>
+        <div class="bg-black ">
+            <div id="jumbo">
+                <img src="/img/jumbotron.jpg" alt="">
             </div>
 
-            <div :class="(prova ? 'd-none' : 'd-block')">
-                <div id="jumbo">
-                    <img src="/img/jumbotron.jpg" alt="">
+            <div class="container">
+              <div class="row ">
+                <div class="col-12 col-md-6 col-lg-3 my-3" v-for="(item,index) in comix" :key="index">
+                    <CardComponents :item="item"/>
+                    <!-- passare un immagine una serie un tipo e un prezzo -->
                 </div>
-
-                <div class=" container d-flex justify-content-center align-items-center py-5">
-                    <div class="row g-3">
-                        <div class="col-3" v-for="(card,index) in cardcontent" :key="index">
-                            <img :src="card" alt="ciao" class="rounded-4 st-card">
-                        </div>
-                    </div>
-                </div>
-               
-
+              </div>
             </div>
+
         </div>
         <BlueSlideC :shop="shop" :shopimg="shopimg"/>
    </main>
@@ -27,14 +21,17 @@
 
 <script>
 import BlueSlideC from './BlueSlideC.vue';
+import {comix} from '../data/store.js';
+import CardComponents from './CardComponents.vue';
     export default {
         name:'MainC',
         components: {
             BlueSlideC,
+            CardComponents,
         },
         data() {
             return {
-                prova: true,
+                comix,
                 shop:[
                    'DIGITAL COMICS',
                    'DC MERCHANDISE',
@@ -49,33 +46,23 @@ import BlueSlideC from './BlueSlideC.vue';
                     '/img/buy-comics-shop-locator.png',
                     '/img/buy-dc-power-visa.svg'
                 ],
-                cardcontent:[
-                    'img/batmancontent.jpeg',
-                    'img/flashcontent.jpeg',
-                    'img/batman2content.jpeg',
-                    'img/flash2content.jpeg',
-                    'img/thorcontent.jpeg',
-                    'img/hulkcontent.jpeg',
-                    'img/thor2content.jpeg',
-                    'img/hulk2content.jpeg',
-
-                ]
             }
         },
-        methods: {
-            jumbo(){
-                if(this.prova){
-                    this.prova=false;
-                }else{
-                    this.prova=true;
-                }
-            }
+        mounted(){
+           console.log(this.comix)
         },
     }
 </script>
 
 <style lang="scss" scoped>
-   
+   #jumbo{
+       width: 100%;
+       height: 600px;
+       img{
+           width: 100%;
+           height: 100%;
+       }
+   }
    .st-card{
        width: 100%;
        height: 400px;

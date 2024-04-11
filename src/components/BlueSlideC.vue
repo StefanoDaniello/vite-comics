@@ -1,18 +1,18 @@
 <template>
 
      <div class="bg-info py-4">
-            <div class="container">
-                <ul class="d-flex">
-                    <li v-for="(img,index) in shopimg" :key="index" class="m-3 d-flex justify-content-center align-items-center ">
-                        <div class="shopimg-width">
-                            <img :src="img" alt="shop-img"/>
-                        </div>
-                        <span class="mx-3">{{shop[index]}}</span>
-                    </li>
-                   
-                </ul>
+        <div class="container">
+            <div class="row">
+                <div v-for="(img,index) in shopimg" :key="index" class=" col-5 col-md-5 col-lg-2  mx-3 d-flex align-items-center">
+                    <div class="shopimg-width">
+                        <img :src="img" alt="shop-img"/>
+                    </div>
+                    <span class="mx-3">{{shop[index]}}</span> 
+                </div>
+                
             </div>
         </div>
+    </div>
 
 </template>
 
