@@ -12,7 +12,7 @@
                 </li>
             </ul>
 
-            <div class="d-flex align-items-center mb-4" id="search-container">
+            <div class="mt-4 none-1" id="search-container">
                 <i class="fa-solid fa-magnifying-glass"></i>
                 <input type="text" placeholder="Search" />
             </div>
@@ -93,7 +93,6 @@
         i{
             position: absolute;
             left: 5px;
-            top: 35%;
         }
     }
    
