@@ -190,13 +190,13 @@
         background-image: url('/img/dc-logo-bg.png');
     }
     .blue-border{
-        border:2px solid rgb(0, 192, 176);
+        border:2px solid #0C7CEC;
     }
     #footer-bottom{
        padding: 10px 0px;
     }
     #sign-button:hover{
-        background-color: rgb(0, 192, 176);
+        background-color:#0C7CEC;
         transition: 0.5s ease-in-out;
     }
 </style>
