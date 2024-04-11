@@ -4,11 +4,13 @@
             <div id="jumbo">
                 <img src="/img/jumbotron.jpg" alt="">
             </div>
-
+            <div class="button-blue d-flex justify-content-center align-items-center">
+                <h2>CURRENT SERIES</h2>
+            </div>
             <div class="container">
               <div class="row ">
                 <div class="col-12 col-md-6 col-lg-3 my-3" v-for="(item,index) in comix" :key="index">
-                    <CardComponents :item="item"/>
+                    <CardComponents :item="item" @elimina="Elimina(index)"/>
                     <!-- passare un immagine una serie un tipo e un prezzo -->
                 </div>
               </div>
@@ -29,9 +31,11 @@ import CardComponents from './CardComponents.vue';
             BlueSlideC,
             CardComponents,
         },
+        emits: ['add'],
         data() {
             return {
                 comix,
+                shop:false,
                 shop:[
                    'DIGITAL COMICS',
                    'DC MERCHANDISE',
@@ -48,8 +52,10 @@ import CardComponents from './CardComponents.vue';
                 ],
             }
         },
-        mounted(){
-           console.log(this.comix)
+        methods: {
+            Elimina(index){
+               this.comix.splice(index,1)
+            }
         },
     }
 </script>
@@ -63,14 +69,13 @@ import CardComponents from './CardComponents.vue';
            height: 100%;
        }
    }
-   .st-card{
-       width: 100%;
-       height: 400px;
-       border: 2px solid transparent;
+   .button-blue{
+       width: 300px;
+       height: 80px;
+       color: white;
+       background-color: #0282F9;
+       border: 2px solid white;
+       border-radius: 10px;
+       transform: translate(50%, -50%);
    }
-   .st-card:hover{
-       box-shadow: 0 0 10px 5px rgb(1, 190, 175);
-       transition: ease-in-out 0.5s;
-       border-color:rgb(255, 255, 255);
-    }
 </style>

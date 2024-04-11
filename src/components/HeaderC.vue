@@ -11,7 +11,13 @@
                     <div class="border-b"></div>
                 </li>
             </ul>
-            <nav class="navbar" id="hamburgher-menu" @click="openMenu">
+
+            <div class="d-flex align-items-center mb-4" id="search-container">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search" />
+            </div>
+
+            <div class="navbar" id="hamburgher-menu" @click="openMenu">
                 <div class="container-fluid">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon "></span>
@@ -26,9 +32,7 @@
                     </ul>
                 </div>
 
-            </nav>
-            
-            
+            </div>
             
         </nav>
    </header>
@@ -73,6 +77,23 @@
         border-radius: 10px;
         transform: translate(0, 66px);
         transition: 0.5s ease-in-out;
+        }
+    }
+    #search-container{
+       position: relative;
+        input{
+            padding-left:25px;
+            border: none;
+            border-bottom: 2px solid #0C7CEC;
+            outline: none;
+            width: calc(100% - 25px);
+            font-size: 15px;
+            background-color: transparent;
+        }
+        i{
+            position: absolute;
+            left: 5px;
+            top: 35%;
         }
     }
    
